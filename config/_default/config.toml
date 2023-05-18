@@ -1,0 +1,15 @@
+theme = "hugo-theme-relearn"
+
+baseURL = 'http://example.org/'
+
+canonifyURLs = true
+relativeURLs = true
+uglyURLs = false
+
+languageCode = 'en'
+defaultContentLanguage = "en"
+
+title = 'GamesInTheBox Documentation'
+
+[markup.goldmark.renderer]
+    unsafe = true
