@@ -1,13 +1,13 @@
 +++
-title = "Block Rush"
-weight = 2
+title = "Defuse the Bomb"
+weight = 3
 +++
 
-{{% button href="https://github.com/GamesInTheBox-MC/BlockRush/releases" style="green" icon="download" %}}Download{{% /button %}}
+{{% button href="https://github.com/GamesInTheBox-MC/DefuseTheBomb/releases" style="green" icon="download" %}}Download{{% /button %}}
 
 ## Install
 
-1. Go to [the download page](https://github.com/GamesInTheBox-MC/BlockRush/releases)
+1. Go to [the download page](https://github.com/GamesInTheBox-MC/DefuseTheBomb/releases)
 2. Choose the latest version
 3. Download the `-shaded` file
 4. Copy the downloaded file to the folder `plugins/GamesInTheBox/expansions`
@@ -15,7 +15,7 @@ weight = 2
 
 ## How to play
 
-A box of blocks would appears at the game arena. Players must mine the blocks to earn points. Those who have the highest points would win the game.
+Bombs would be spawned at the game arena. Players must click the bomb to defuse it and earn points. If a bomb exploded near a player, his points would be decreased. Those who have the highest points would win the game.
 
 ## Set up
 
@@ -27,17 +27,17 @@ A box of blocks would appears at the game arena. Players must mine the blocks to
 The stones are for the two corners of the box
 {{% /notice %}}
 
-2. Look at the first corner and type `/gitbeditor action rush set-pos1`
+2. Look at the first corner and type `/gitbeditor action dtb set-pos1`
 
 ![2-Set-Pos1](2-set-pos1.png)
 
-3. Look at the second corner and type `/gitbeditor action rush set-pos2`
+3. Look at the second corner and type `/gitbeditor action dtb set-pos2`
 
 ![3-Set-Pos2](3-set-pos2.png)
 
 4. Configure [additional settings](#additional-settings)
 
-5. Save the settings as a new arena by typing `/gitbeditor save rush <planner> <arena>`
+5. Save the settings as a new arena by typing `/gitbeditor save dtb <planner> <arena>`
 
 6. Clear the unnecessary blocks. Your new arena will be available after reloading
 
@@ -46,18 +46,19 @@ The stones are for the two corners of the box
 ## Additional Settings
 
 {{% notice style="note" %}}
-The settings below are available as the actions of the command `/gitbeditor action rush <action> [args]`
+The settings below are available as the actions of the command `/gitbeditor action dtb <action> [args]`
 
-For example, the action `set-point <number> block` is relevant to the command `/gitbeditor action rush set-point <number> block`
+For example, the action `set-point <number> plus` is relevant to the command `/gitbeditor action dtb set-point <number> plus`
 
-Use the command `/gitbeditor usage rush` to get the full list of available actions and their usage
+Use the command `/gitbeditor usage dtb` to get the full list of available actions and their usage
 
-Use the command `/gitbeditor status rush` to get the status of the settings, including the current values for each one of them
+Use the command `/gitbeditor status dtb` to get the status of the settings, including the current values for each one of them
 {{% /notice %}}
 
 ### Point
 
-* `set-point <number> block` to set the points a player would receive when he breaks a block
+* `set-point <number> plus` to set the points a player would receive when he defuses a bomb
+* `set-point <number> minus` to set the points decreased when a player is damaged by a bomb exploding
 
 ### Reward
 
@@ -101,11 +102,6 @@ For example, if you want to use the `description` hologram lines, the appropriat
 * `remove-hologram <index>` to remove the hologram at the `<index>`
 * `clear-all-hologram` to clear all holograms
 
-### Block
-
-* `set-material <material> <number>` to set the probability `<number>` of the `<material>` as a block in the box
-* `drop-item-on-break <true/false>` to enable / disable dropping items when a player breaks a block
-
 ### Time
 
 * `set-waiting-time <time>` to set the `<time>` before the game starts
@@ -119,3 +115,20 @@ You can set the `<time>` in seconds by adding `s` after the time. For example, `
 
 Similarly, you can set the `<time>` in minutes by using `m` (`30m` for 30 minutes)
 {{% /notice %}}
+
+### Bomb & Bomb Spawning
+
+* `set-min-fuse-ticks <number>` to set the minimum fuse ticks of the bomb
+* `set-max-fuse-ticks <number>` to set the maximum fust ticks of the bomb
+* `set-explode-yield <number>` to set the damage yield when a bomb explodes
+* `set-damage-on-explode <true/false>` to enable / disable player damaging when a bomb explodes
+* `set-max-spawn <number>` to set the maximum amount of bombs allowed on the game arena
+* `set-min-x <number>` to set the X offset between the minimum corner of the game box and that of the spawning box
+* `set-max-x <number>` to set the X offset between the maximum corner of the game box and that of the spawning box
+* `set-min-y <number>` to set the Y offset between the minimum corner of the game box and that of the spawning box
+* `set-max-y <number>` to set the Y offset between the maximum corner of the game box and that of the spawning box
+* `set-min-z <number>` to set the Z offset between the minimum corner of the game box and that of the spawning box
+* `set-max-z <number>` to set the Z offset between the maximum corner of the game box and that of the spawning box
+* `add-name-tag <name>` to add a name tag that would be set to the bomb
+* `clear-name-tags` to clear all the name tags
+
