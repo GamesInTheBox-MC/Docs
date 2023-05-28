@@ -119,3 +119,25 @@ You can set the `<time>` in seconds by adding `s` after the time. For example, `
 
 Similarly, you can set the `<time>` in minutes by using `m` (`30m` for 30 minutes)
 {{% /notice %}}
+
+## Variable
+
+| Variable | Description |
+| --- | --- |
+| `{game_point}` | The points of the player |
+| `{game_top}` | The top position of the player |
+| `{game_time_left}` | The time left of the game arena |
+| `{game_min_players_to_reward}` | The minimum players to start the reward |
+| `{game_point_block}` | The points to give when a player mines a block |
+| `{game_top_name_<number>}` | The name of the player at the top position `<number>` |
+| `{game_top_value_<number>}` | The value of the player at the top position `<number>` |
+
+## Action
+
+{{% notice style="note" %}}
+The actions below are used in the command `/gitb action <planner> <action> [args]`
+
+For example, the command to use the action `skip-time` is `gitb action <planner> skip-time`
+{{% /notice %}}
+
+* `skip-time` to skip the time on a state of the current arena

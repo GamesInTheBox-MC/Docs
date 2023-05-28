@@ -130,3 +130,26 @@ Similarly, you can set the `<time>` in minutes by using `m` (`30m` for 30 minute
 * `set-particle-offset-z <number>` to set the Z offset of the particle of the box
 * `set-particle-rate <number>` to set the density (rate) of the particle of the box
 * `set-particle-period <number>` to set the period between each call of spawning the particle
+
+## Variable
+
+| Variable | Description |
+| --- | --- |
+| `{game_point}` | The points of the player |
+| `{game_top}` | The top position of the player |
+| `{game_time_left}` | The time left of the game arena |
+| `{game_min_players_to_reward}` | The minimum players to start the reward |
+| `{game_point_plus}` | The points to give when a player enters the box |
+| `{game_point_minus}` | The points to take when a player is out of the box |
+| `{game_top_name_<number>}` | The name of the player at the top position `<number>` |
+| `{game_top_value_<number>}` | The value of the player at the top position `<number>` |
+
+## Action
+
+{{% notice style="note" %}}
+The actions below are used in the command `/gitb action <planner> <action> [args]`
+
+For example, the command to use the action `skip-time` is `gitb action <planner> skip-time`
+{{% /notice %}}
+
+* `skip-time` to skip the time on a state of the current arena
