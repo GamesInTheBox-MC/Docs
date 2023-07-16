@@ -13,4 +13,8 @@ Arena is "game in action", which is usually a place Game takes part in. Operator
 
 ## Planner
 
-Planner is the biggest unit of the plugin. It's a unit to handle multiple Arenas, usually for scheduling which Arena would be run at a certain time. A part of a Planner that chooses which Arena will be run is called Picker, and it can be configured by operators to specify how to choose (pick) an Arena.
+Planner is the biggest unit of the plugin. It's a unit to handle multiple Arenas, usually for scheduling which Arena would be run at a certain time.
+
+## Picker
+
+Picker is a part of a Planner that chooses which Arena will be run. it can be configured by operators to specify how to choose (pick) an Arena.
