@@ -18,9 +18,6 @@ block-util:
   # Should the plugin use FastAsyncWorldEdit if it exists ?
   use-fawe: true
 
-  # Should the plugin use WorldEdit if it exists ?
-  use-we: false
-
 # Settings for Planners
 planner:
   # The delay between Planner's tick
