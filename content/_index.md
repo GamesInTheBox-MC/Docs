@@ -8,7 +8,7 @@ Games In The Box is a certain minigame system for Spigot servers, with the idea 
 ## Feature
 
 * Multiple games in a region (box)
-* [Built-in games]({{% ref "game" %}})
+* [Premade games]({{% ref "game" %}})
 * [Picker]({{% ref "picker" %}}) to choose an arena
 * Extension system
 * [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) support
