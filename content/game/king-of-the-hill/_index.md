@@ -125,9 +125,7 @@ Similarly, you can set the `<time>` in minutes by using `m` (`30m` for 30 minute
 
 * `set-particle <particle>` to set the `<particle>` of the box
 * `set-particle-count <number>` to set the count of the particle of the box
-* `set-particle-offset-x <number>` to set the X offset of the particle of the box
-* `set-particle-offset-y <number>` to set the Y offset of the particle of the box
-* `set-particle-offset-z <number>` to set the Z offset of the particle of the box
+* `set-particle-offset <x> <y> <z>` to set the offset of the particle of the box
 * `set-particle-rate <number>` to set the density (rate) of the particle of the box
 * `set-particle-period <number>` to set the period between each call of spawning the particle
 
