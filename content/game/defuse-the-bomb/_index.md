@@ -1,6 +1,6 @@
 +++
 title = "Defuse the Bomb"
-weight = 3
+weight = 1
 +++
 
 {{% button href="https://github.com/GamesInTheBox-MC/DefuseTheBomb/releases" style="green" icon="download" %}}Download{{% /button %}}

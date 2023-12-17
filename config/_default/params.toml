@@ -1,6 +1,6 @@
 editURL = "https://github.com/GamesInTheBox-MC/Docs/edit/main/content/"
 description = "The Documentation for GamesInTheBox & its expansions"
-author = "HSGamer"
+author.name = "HSGamer"
 showVisitedLinks = true
 disableSearchHiddenPages = true
 disableSeoHiddenPages = true

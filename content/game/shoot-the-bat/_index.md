@@ -1,6 +1,6 @@
 +++
 title = "Shoot the Bat"
-weight = 4
+weight = 1
 +++
 
 {{% button href="https://github.com/GamesInTheBox-MC/ShootTheBat/releases" style="green" icon="download" %}}Download{{% /button %}}

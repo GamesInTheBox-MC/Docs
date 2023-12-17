@@ -1,13 +1,13 @@
 +++
-title = "Block Rush"
+title = "Pinata"
 weight = 1
 +++
 
-{{% button href="https://github.com/GamesInTheBox-MC/BlockRush/releases" style="green" icon="download" %}}Download{{% /button %}}
+{{% button href="https://github.com/GamesInTheBox-MC/Pinata/releases" style="green" icon="download" %}}Download{{% /button %}}
 
 ## Install
 
-1. Go to [the download page](https://github.com/GamesInTheBox-MC/BlockRush/releases)
+1. Go to [the download page](https://github.com/GamesInTheBox-MC/Pinata/releases)
 2. Choose the latest version
 3. Download the `-shaded` file
 4. Copy the downloaded file to the folder `plugins/GamesInTheBox/expansions`
@@ -15,7 +15,7 @@ weight = 1
 
 ## How to play
 
-A box of blocks would appears at the game arena. Players must mine the blocks to earn points. Those who have the highest points would win the game.
+A pinata would be spawned at the game arena. Players must hit them to earn points. Those who have the highest points would win the game.
 
 ## Set up
 
@@ -27,17 +27,17 @@ A box of blocks would appears at the game arena. Players must mine the blocks to
 The stones are for the two corners of the box
 {{% /notice %}}
 
-2. Look at the first corner and type `/gitbeditor action rush set-pos1`
+2. Look at the first corner and type `/gitbeditor action pinata set-pos1`
 
 ![2-Set-Pos1](2-set-pos1.png)
 
-3. Look at the second corner and type `/gitbeditor action rush set-pos2`
+3. Look at the second corner and type `/gitbeditor action pinata set-pos2`
 
 ![3-Set-Pos2](3-set-pos2.png)
 
 4. Configure [additional settings](#additional-settings)
 
-5. Save the settings as a new arena by typing `/gitbeditor save rush <planner> <arena>`
+5. Save the settings as a new arena by typing `/gitbeditor save pinata <planner> <arena>`
 
 6. Clear the unnecessary blocks. Your new arena will be available after reloading
 
@@ -46,18 +46,19 @@ The stones are for the two corners of the box
 ## Additional Settings
 
 {{% notice style="note" %}}
-The settings below are available as the actions of the command `/gitbeditor action rush <action> [args]`
+The settings below are available as the actions of the command `/gitbeditor action pinata <action> [args]`
 
-For example, the action `set-point <number> block` is relevant to the command `/gitbeditor action rush set-point <number> block`
+For example, the action `set-point <number> hit` is relevant to the command `/gitbeditor action pinata set-point <number> hit`
 
-Use the command `/gitbeditor usage rush` to get the full list of available actions and their usage
+Use the command `/gitbeditor usage pinata` to get the full list of available actions and their usage
 
-Use the command `/gitbeditor status rush` to get the status of the settings, including the current values for each one of them
+Use the command `/gitbeditor status pinata` to get the status of the settings, including the current values for each one of them
 {{% /notice %}}
 
 ### Point
 
-* `set-point <number> block` to set the points a player would receive when he breaks a block
+* `set-point <number> hit` to set the points a player would receive when he hit the pinata
+* `set-damage-as-point <true/false>` to set whether to use the damage value as points
 
 ### Reward
 
@@ -101,11 +102,6 @@ For example, if you want to use the `description` hologram lines, the appropriat
 * `remove-hologram <index>` to remove the hologram at the `<index>`
 * `clear-all-hologram` to clear all holograms
 
-### Block
-
-* `set-material <material> <number>` to set the probability `<number>` of the `<material>` as a block in the box
-* `drop-item-on-break <true/false>` to enable / disable dropping items when a player breaks a block
-
 ### Time
 
 * `set-waiting-time <time>` to set the `<time>` before the game starts
@@ -120,6 +116,19 @@ You can set the `<time>` in seconds by adding `s` after the time. For example, `
 Similarly, you can set the `<time>` in minutes by using `m` (`30m` for 30 minutes)
 {{% /notice %}}
 
+### Pinata & Pinata Spawning
+
+* `set-pinata-type <entity>` to set the entity type of the pinata
+* `set-ai <true/false>` to set whether the pinata has AI
+* `set-min-x <number>` to set the X offset between the minimum corner of the game box and that of the spawning box
+* `set-max-x <number>` to set the X offset between the maximum corner of the game box and that of the spawning box
+* `set-min-y <number>` to set the Y offset between the minimum corner of the game box and that of the spawning box
+* `set-max-y <number>` to set the Y offset between the maximum corner of the game box and that of the spawning box
+* `set-min-z <number>` to set the Z offset between the minimum corner of the game box and that of the spawning box
+* `set-max-z <number>` to set the Z offset between the maximum corner of the game box and that of the spawning box
+* `add-name-tag <name>` to add a name tag that would be set to the pinata
+* `clear-name-tags` to clear all the name tags
+
 ## Variable
 
 | Variable | Description |
@@ -128,7 +137,7 @@ Similarly, you can set the `<time>` in minutes by using `m` (`30m` for 30 minute
 | `{game_top}` | The top position of the player |
 | `{game_time_left}` | The time left of the game arena |
 | `{game_min_players_to_reward}` | The minimum players to start the reward |
-| `{game_point_block}` | The points to give when a player mines a block |
+| `{game_point_hit}` | The points to give when a player hit the pinata |
 | `{game_top_name_<number>}` | The name of the player at the top position `<number>` |
 | `{game_top_value_<number>}` | The value of the player at the top position `<number>` |
 
@@ -141,3 +150,4 @@ For example, the command to use the action `skip-time` is `gitb action <planner>
 {{% /notice %}}
 
 * `skip-time` to skip the time on a state of the current arena
+

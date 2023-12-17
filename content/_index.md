@@ -21,6 +21,7 @@ Games In The Box is a certain minigame system for Spigot servers, with the idea 
 ![Block Rush](showcase-rush.png)
 ![Defuse the Bomb](showcase-dtb.png)
 ![Shoot the Bat](showcase-stb.png)
+![Pinata](showcase-pinata.png)
 
 ## Video
 
